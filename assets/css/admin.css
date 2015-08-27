@@ -1,0 +1,63 @@
+body {
+  font-family: helvetica;
+}
+
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenuback,
+#adminmenuwrap {
+  background-color: #323E48;
+  /*background-color: #fff;
+  color: #323e48;*/
+}
+
+/*#adminmenu a,
+#adminmenu div.wp-menu-image::before {
+  color: #323e48;
+}
+
+#wpadminbar .ab-icon, #wpadminbar .ab-icon::before, #wpadminbar .ab-item::after, #wpadminbar .ab-item::before,
+#collapse-menu:hover, #collapse-menu:hover #collapse-button div:after, #wpadminbar .ab-item, #wpadminbar a.ab-item, #wpadminbar>#wp-toolbar span.ab-label, #wpadminbar>#wp-toolbar span.noticon {
+  color: #323e48;
+}*/
+
+#wpadminbar {
+  background-color: #323E48;
+}
+
+/* Menu Item background */
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+.folded #adminmenu li.current.menu-top,
+.folded #adminmenu li.wp-has-current-submenu {
+  background-color: #333;
+}
+
+/* Menu item text hover */
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu a:hover,
+#adminmenu a:hover,
+#adminmenu li.menu-top>a:focus {
+  color: #fff;
+}
+
+#adminmenu a:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+  background-color: #c03;
+}
+
+a {
+  color: #53b9f1;
+}
+
+a:active,
+a:hover {
+    color: #71cef5;
+}
+
+/* HIDE */
+#footer-thankyou {
+  display: none;
+  visibility: hidden;
+}

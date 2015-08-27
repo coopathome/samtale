@@ -1,0 +1,5 @@
+*.log
+*.DS_Store
+*.esproj
+*.espressostorage
+node_modules
