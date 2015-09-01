@@ -8,7 +8,7 @@
 
 	<?php if (have_posts()) : ?>
 
-		<h2><?php _e('Search Results','html5reset'); ?></h2>
+		<h2><?php _e('Search Results for','html5reset'); ?> <em><?php echo get_search_query(); ?></em></h2>
 
 		<?php post_navigation(); ?>
 
