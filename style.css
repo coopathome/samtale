@@ -282,6 +282,7 @@ figcaption,
   padding-left: 2rem;
   border-left: 1px solid #c03;
   border-left: 2px solid #f1f1f1;
+  margin-left: 0;
 }
 
 .comment .children .children {
@@ -291,6 +292,10 @@ figcaption,
 
 .comment .children .children .children {
   border-color: #71cef5;
+}
+
+li.comment {
+  list-style: none;
 }
 
 .comment-author.vcard .avatar {
