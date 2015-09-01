@@ -349,6 +349,14 @@ div#wpadminbar {
   background: #c6cfd5;
 }
 
+body #wpadminbar .ab-top-menu>li.hover>.ab-item,
+body #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
+body #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
+body #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+    background-color: #8dc63f;
+    color: #fff;
+}
+
 /*
   Red: #CC0000;
   Yellow: #F6A800;
