@@ -107,7 +107,7 @@
 				<img src="<?php bloginfo('template_directory'); ?>/assets/img/shield.svg" alt="Co-op Logo" class="site-logo">
 			</a>
 			<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
-			<div class="site-description"><?php bloginfo( 'description' ); ?><br><em>βeta</em></div>
+			<div class="site-description"><?php bloginfo( 'description' ); ?><br><em><a href="<?php echo esc_url( home_url( '/beta/' ) ); ?>">βeta</a></em></div>
 
 			<nav id="nav" role="navigation">
 				<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>

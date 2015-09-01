@@ -59,6 +59,7 @@ img {
 
 body {
   background-color: #f1f1f1;
+  /*background-color: #e6eaed;*/
   font-family: Helvetica, sans-serif;
   font-family: 'Source Code Pro', monospace;
   font-weight: lighter;
@@ -138,6 +139,17 @@ h2 {
     font-size: 2rem;
     line-height: 3.25rem;
   }
+}
+
+ul {
+  margin-bottom: 2rem;
+  list-style: circle;
+  margin-left: 1.25rem;
+}
+
+header ul {
+  list-style: none;
+  margin-left: 0;
 }
 
 h1, h2, h3, h4 {
@@ -287,6 +299,10 @@ figcaption,
   width: 1.5rem;
 }
 
+img.avatar.avatar-26.photo {
+  border-radius: 100%;
+}
+
 #commentform input[type=submit] {
   border: 1px solid #323E48;
   margin-top: -2.125rem;
@@ -296,4 +312,32 @@ figcaption,
 #commentform input[type=submit]:hover {
   background: #8dc63f;
   color: #fff;
+}
+
+.post-nav {
+  overflow: hidden;
+  background: white;
+  border-top: 2px solid #f1f1f1;
+}
+
+.post-nav-next,
+.post-nav-prev {
+  width: 50%;
+  float: left;
+  padding: 2rem;
+}
+
+.post-nav-prev {
+  border-right: 1px solid #f1f1f1;
+  height: 100%;
+}
+
+.post-nav-next {
+  border-left: 1px solid #f1f1f1;
+  height: 100%;
+  text-align: right;
+}
+
+div#wpadminbar {
+  background: #c6cfd5;
 }

@@ -32,6 +32,27 @@
 
 	<?php comments_template(); ?>
 
+  <div class="post-nav">
+    <div class="post-nav-prev">
+      <?php
+        $prev_post = get_previous_post();
+        if ( is_a( $prev_post , 'WP_Post' ) ) { ?>
+          <a href="<?php echo get_permalink( $prev_post->ID ); ?>">&larr; <?php echo get_the_title( $prev_post->ID ); ?></a>
+          <!-- <br><small><?php echo get_the_date( $prev_post->date ); ?></small> -->
+        <?php }
+      ?>
+    </div>
+    <div class="post-nav-next">
+      <?php
+        $next_post = get_next_post();
+        if ( is_a( $next_post , 'WP_Post' ) ) { ?>
+          <a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo get_the_title( $next_post->ID ); ?> &rarr;</a>
+          <!-- <br><small><?php echo get_the_date( $next_post->date ); ?></small> -->
+        <?php }
+      ?>
+    </div>
+  </div>
+
 	<?php endwhile; endif; ?>
 
 <?php post_navigation(); ?>
