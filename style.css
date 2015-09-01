@@ -13,7 +13,7 @@ Version: 1.0
 a {color: #03f;}
 a:hover {color: #69f;}
 
-a:link {-webkit-tap-highlight-color: #c03;}
+a:link {-webkit-tap-highlight-color: #c00;}
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
@@ -96,7 +96,7 @@ article {
 }
 
 a {
-  color: #c03;
+  color: #c00;
   color: #d31145;
   text-decoration: none;
 }
@@ -164,8 +164,8 @@ h1, h2, h3, h4 {
   border-top: 2px solid #f1f1f1;
 }
 
-::-moz-selection{background: #c03; color: #fff; text-shadow: none;}
-::selection {background: #c03; color: #fff; text-shadow: none;}
+::-moz-selection{background: #c00; color: #fff; text-shadow: none;}
+::selection {background: #c00; color: #fff; text-shadow: none;}
 
 textarea {
   width: 100%;
@@ -204,7 +204,7 @@ input[type=submit] {
 }
 
 blockquote {
-  border-left: 2px solid #c03;
+  border-left: 2px solid #c00;
   padding-left: 2rem;
   font-style: italic;
 }
@@ -280,7 +280,7 @@ figcaption,
 .comment .children {
   overflow: visible;
   padding-left: 2rem;
-  border-left: 1px solid #c03;
+  border-left: 1px solid #c00;
   border-left: 2px solid #f1f1f1;
   margin-left: 0;
 }
@@ -343,6 +343,13 @@ img.avatar.avatar-26.photo {
   text-align: right;
 }
 
+/* ADMIN BAR */
+
 div#wpadminbar {
   background: #c6cfd5;
 }
+
+/*
+  Red: #CC0000;
+  Yellow: #F6A800;
+*/
