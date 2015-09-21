@@ -204,9 +204,18 @@ input[type=submit] {
 }
 
 blockquote {
-  border-left: 2px solid #c00;
+  /*border-left: 2px solid #c00;*/
   padding-left: 2rem;
   font-style: italic;
+}
+
+blockquote:before {
+  content: "“";
+  display: inline-block;
+  position: absolute;
+  color: #eee;
+  font-size: 4rem;
+  margin-left: -3.5rem;
 }
 
 a img:hover {
