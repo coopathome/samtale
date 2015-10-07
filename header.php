@@ -109,7 +109,7 @@
 			<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
 			<div class="site-description"><?php bloginfo( 'description' ); ?><br><em><a href="<?php echo esc_url( home_url( '/beta/' ) ); ?>">βeta</a></em></div>
 
-			<nav id="nav" role="navigation">
+			<nav id="nav" class="site-nav" role="navigation">
 				<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
 			</nav>
 		</header>

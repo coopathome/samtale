@@ -12,8 +12,6 @@
 
 			<h1><?php the_title(); ?></h1>
 
-			<?php posted_on(); ?>
-
 			<div class="entry">
 
 				<?php the_content(); ?>
@@ -26,7 +24,7 @@
 
 		</article>
 
-		<?php comments_template(); ?>
+		<!-- <?php comments_template(); ?> -->
 
 		<?php endwhile; endif; ?>
 
