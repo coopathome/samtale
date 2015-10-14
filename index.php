@@ -12,7 +12,8 @@
 
 			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
-			<?php posted_on(); ?>
+			<em>Posted by <?php the_author_posts_link() ?> on <a href="<?php the_permalink();?>"><?php the_date(); ?></a></em>
+      <br><br>
 
 			<div class="entry">
 				<?php the_content(); ?>

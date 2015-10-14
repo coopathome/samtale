@@ -22,8 +22,6 @@
 
 				<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?>
 
-				<?php posted_on(); ?>
-
 			</div>
 
 			<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>

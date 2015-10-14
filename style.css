@@ -408,3 +408,44 @@ body #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
   Red: #CC0000;
   Yellow: #F6A800;
 */
+
+table {
+  min-width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+tr {
+  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #eee;
+}
+
+tr:last-of-type {
+  border-bottom: none;
+}
+
+td {
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 600px) {
+  tr:nth-of-type(2n) {
+    background: #f1f1f1;
+  }
+}
+
+@media (min-width: 600px) {
+  table {
+    font-size: 0.875rem;
+  }
+  td {
+    padding: 0.5rem 0.5rem;
+    border-right: 1px solid #eee;
+  }
+}
+
+td:last-of-type {
+  border-right: none;
+}
