@@ -43,7 +43,10 @@ body {
   color: #fff;
 }
 
-#adminmenu a:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub>a.menu-top,
+#adminmenu li>a.menu-top:focus {
   background-color: #c03;
 }
 

@@ -10,11 +10,6 @@ Version: 1.0
 /* Ok, this is where the fun starts.
 -------------------------------------------------------------------------------*/
 
-a {color: #03f;}
-a:hover {color: #69f;}
-
-a:link {-webkit-tap-highlight-color: #c00;}
-
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
 
@@ -58,6 +53,8 @@ img {
 
 body {
   background-color: #f1f1f1;
+  /*background-color: #fff;
+  background-image: url('assets/img/waves.svg');*/
   /*background-color: #e6eaed;*/
   font-family: Helvetica, sans-serif;
   font-family: 'Source Code Pro', monospace;
@@ -80,7 +77,16 @@ body {
 article {
   background: #fff;
   padding: 2rem 1.5rem;
+  /*box-shadow: 0px 4px 14px #e0e0e0;
+  margin-bottom: 1px solid #e0e0e0;
+  border-radius: 0.25rem;
+  margin-bottom: 4rem;*/
 }
+
+/*article:hover {
+  box-shadow: 0px 8px 14px #e0e0e0;
+  transition: opacity 0.35s;
+}*/
 
 @media only screen and (min-width: 321px)  {
   article {
@@ -94,9 +100,14 @@ article {
   }
 }
 
+.home article {
+  border-bottom: 1px solid #f1f1f1;
+}
+
 a {
   color: #c00;
   color: #d31145;
+  /*color: #53b9f1;*/
   text-decoration: none;
 }
 
@@ -140,11 +151,13 @@ h2 {
   }
 }
 
-ul {
+ul,
+ol {
   margin-bottom: 2rem;
-  list-style: circle;
   margin-left: 1.25rem;
 }
+
+ul { list-style: circle; }
 
 header ul {
   list-style: none;
@@ -265,6 +278,7 @@ figcaption,
 }
 
 .site-nav {
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -448,4 +462,46 @@ td {
 
 td:last-of-type {
   border-right: none;
+}
+
+.site-nav {
+  /*position: absolute;
+  margin-left: -15rem;
+  margin-top: 10rem;*/
+  /*font-family: helvetica;
+  font-weight: bold;*/
+  font-size: 0.875rem;
+}
+
+.menu-header-nav-container > ul li > ul {
+  display: none;
+  position: absolute;
+  clear: both;
+  text-align: left;
+  margin-left: -4.25rem;
+  background: #fff;
+  background: rgba(241,241,241,0.75);
+  padding: 0.25rem 0.5rem;
+}
+
+/*.menu-header-nav-container > ul li > ul:before {
+  border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid black;
+  content: "";
+}*/
+
+.menu-header-nav-container > ul li:hover > ul {
+  display: inline-block;
+}
+
+.menu-header-nav-container > ul li > ul li {
+  display: block;
+  clear: both;
+  float: none;
+}
+
+.menu-header-nav-container > ul li > ul li:before {
+  content: none;
+  margin-right: 0;
 }
