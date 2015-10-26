@@ -33,7 +33,7 @@ function optionsframework_options() {
 	foreach ($options_categories_obj as $category) {
 		$options_categories[$category->cat_ID] = $category->cat_name;
 	}
-	
+
 	// Pull all tags into an array
 	$options_tags = array();
 	$options_tags_obj = get_tags();

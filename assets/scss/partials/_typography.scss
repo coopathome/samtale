@@ -1,0 +1,111 @@
+$line-height: 1.875rem;
+$bodytype: 'Source Sans Pro', Helvetica, sans-serif;
+$headingtype: helvetica, sans-serif;
+$mono: 'Source Code Pro', monospace;
+
+body {
+  font-family: $bodytype;
+  font-size: 1.125rem;
+  line-height: $line-height;
+  font-weight: 300;
+  color: $darkgrey;
+}
+
+h1, h2, h3, h4 {
+  color: $black;
+  font-family: $headingtype;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 3.25rem;
+}
+
+@media only screen and (min-width: 500px)  {
+  h1 {
+    font-size: 3rem;
+    line-height: 4.25rem;
+  }
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+}
+
+@media only screen and (min-width: 500px)  {
+  h2 {
+    font-size: 2rem;
+    line-height: 3.25rem;
+  }
+}
+
+
+p {
+  margin-bottom: 36px;
+  margin-bottom: $line-height;
+}
+
+blockquote {
+  /*border-left: 2px solid #c00;*/
+  padding-left: 2rem;
+  font-style: italic;
+}
+
+blockquote:before {
+  content: "“";
+  display: inline-block;
+  position: absolute;
+  color: #eee;
+  font-size: 4rem;
+  margin-left: -3.5rem;
+}
+
+ul,
+ol {
+  margin-bottom: 2rem;
+  margin-left: 1.25rem;
+}
+
+ul {
+  list-style: circle;
+  ul {
+    list-style: disc;
+  }
+}
+
+header ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+a {
+  color: $red;
+}
+
+ins {
+  background-color: $yellow;
+  color: $black;
+  text-decoration: none;
+}
+
+mark {
+  background: $yellow;
+  color: $black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.caps {
+  font-feature-settings: "c2sc" 1, "smcp" 1;
+}
+
+// .postmetadata {
+//   font-family: $mono;
+//   font-size: 1rem;
+// }

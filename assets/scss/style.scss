@@ -7,17 +7,6 @@ Author URI: http://design.coopathome.ca
 Version: 1.0
 */
 
-// Ok, this is where the fun starts.
-
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
-
-// Mozilla dosen't style place holders by default
-input:-moz-placeholder { color:#a9a9a9; }
-textarea:-moz-placeholder { color:#a9a9a9; }
-
-// And here begins the WordPress fun.
-
 #wrapper,
 .wrapper {
   width: 90%;
@@ -30,80 +19,11 @@ textarea:-moz-placeholder { color:#a9a9a9; }
   padding-right: 4rem;
 }
 
-// Print styles!
-
-@media print {
-
-}
-
-* {
-  box-sizing: inherit
-}
-
-html {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-body {
-  background-color: #f1f1f1;
-  /*background-color: #fff;
-  background-image: url('assets/img/waves.svg');*/
-  /*background-color: #e6eaed;*/
-  font-family: Helvetica, sans-serif;
-  font-family: 'Source Sans Pro', 'Source Code Pro', monospace;
-  font-weight: lighter;
-  /*font-size: 22px;
-  line-height: 41px;*/
-  font-size: 0.875rem;
-  line-height: 1.875rem;
-  /*color: #757575;
-  color: #778590;*/
-  color: #455561;
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
-}
-
 @media only screen and (min-width: 500px)  {
   body {
     font-size: 1rem;
     line-height: 36px;
   }
-}
-
-article {
-  background: #fff;
-  padding: 2rem 1.5rem;
-  /*box-shadow: 0px 4px 14px #e0e0e0;
-  margin-bottom: 1px solid #e0e0e0;
-  border-radius: 0.25rem;
-  margin-bottom: 4rem;*/
-}
-
-/*article:hover {
-  box-shadow: 0px 8px 14px #e0e0e0;
-  transition: opacity 0.35s;
-}*/
-
-@media only screen and (min-width: 321px)  {
-  article {
-    padding: 2rem;
-  }
-}
-
-@media only screen and (min-width: 500px)  {
-  article {
-    padding: 4rem;
-  }
-}
-
-.home article {
-  border-bottom: 1px solid #f1f1f1;
 }
 
 a {
@@ -119,57 +39,6 @@ a:hover {
   text-decoration: underline;
 }
 
-p {
-  margin-bottom: 36px;
-}
-
-h1 {
-  font-family: Helvetica;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 3.25rem;
-}
-
-@media only screen and (min-width: 500px)  {
-  h1 {
-    font-size: 3rem;
-    line-height: 4.25rem;
-  }
-}
-
-h2 {
-  margin-bottom: 2rem;
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 2.75rem;
-}
-
-@media only screen and (min-width: 500px)  {
-  h2 {
-    font-size: 2rem;
-    line-height: 3.25rem;
-  }
-}
-
-ul,
-ol {
-  margin-bottom: 2rem;
-  margin-left: 1.25rem;
-}
-
-ul { list-style: circle; }
-
-header ul {
-  list-style: none;
-  margin-left: 0;
-}
-
-h1, h2, h3, h4 {
-  color: #333e48;
-  font-family: helvetica;
-}
 
 .post-comments {
   background-color: #fff;
@@ -181,11 +50,6 @@ h1, h2, h3, h4 {
 ::-moz-selection{background: #c00; color: #fff; text-shadow: none;}
 ::selection {background: #c00; color: #fff; text-shadow: none;}
 
-textarea {
-  width: 100%;
-  resize: vertical;
-  border: 1px solid #323E48;
-}
 
 footer {
   padding: 4rem;
@@ -200,14 +64,6 @@ footer {
   margin-bottom: 1.25rem;
 }
 
-button,
-input[type=submit] {
-  -webkit-appearance: none;
-  background: none;
-  border: none;
-  font-size: inherit;
-}
-
 .site-header {
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -215,21 +71,6 @@ input[type=submit] {
 
 .site-logo {
   height: 4rem;
-}
-
-blockquote {
-  /*border-left: 2px solid #c00;*/
-  padding-left: 2rem;
-  font-style: italic;
-}
-
-blockquote:before {
-  content: "“";
-  display: inline-block;
-  position: absolute;
-  color: #eee;
-  font-size: 4rem;
-  margin-left: -3.5rem;
 }
 
 a img:hover {
@@ -264,15 +105,14 @@ textarea:focus {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /*clear: both;*/
   margin-bottom: 2rem;
 }
 
 figcaption,
 .wp-caption-text {
-    font-size: 0.75rem;
-    text-align: center;
-    font-style: italic;
+  font-size: 0.75rem;
+  text-align: center;
+  font-style: italic;
 }
 
 .site-description {
@@ -298,10 +138,6 @@ figcaption,
   content: none;
   margin-right: none;
 }
-
-/*.current-menu-item {
-  border-bottom: 1px solid #ddd;
-}*/
 
 .current-menu-item:after {
   content: "";
@@ -348,7 +184,6 @@ figcaption,
 
 .comment .children .children {
   border-color: #8dc63f;
-  /*border-color: #fdb813;*/
 }
 
 .comment .children .children .children {
@@ -416,101 +251,37 @@ body #wpadminbar .ab-top-menu>li.hover>.ab-item,
 body #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
 body #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
 body #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
-    background-color: #8dc63f;
-    color: #fff;
+  background-color: #8dc63f;
+  color: #fff;
 }
 
-/*
-  Red: #CC0000;
-  Yellow: #F6A800;
-*/
+@import 'partials/all';
+@import 'modules/all';
 
-table {
-  min-width: 50%;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 0.75rem;
-  margin-bottom: 2rem;
+body {
+  // background-color: #f1f1f1;
+  background-color: $subduedgrey;
+  // background-color: $white;
+  // background-image: url('assets/img/waves.svg');
+  // background-color: #e6eaed;
 }
 
-tr {
-  border-bottom: 1px solid #f1f1f1;
-  border-bottom: 1px solid #eee;
+.home article {
+
 }
 
-tr:last-of-type {
-  border-bottom: none;
-}
-
-td {
-  padding: 0.25rem 0.5rem;
-}
-
-@media (max-width: 600px) {
-  tr:nth-of-type(2n) {
-    background: #f1f1f1;
+.site-logo {
+  &:hover .logo-path {
+    fill: #52b9f1;
+    fill: #8dc63f;
+    fill: #e6670a;
+    fill: $orange;
+    // transform: rotate(10deg);
   }
 }
 
-@media (min-width: 600px) {
-  table {
-    font-size: 0.875rem;
-  }
-  td {
-    padding: 0.5rem 0.5rem;
-    border-right: 1px solid #eee;
-  }
-}
+// Print styles!
 
-td:last-of-type {
-  border-right: none;
-}
+@media print {
 
-.site-nav {
-  /*position: absolute;
-  margin-left: -15rem;
-  margin-top: 10rem;*/
-  /*font-family: helvetica;
-  font-weight: bold;*/
-  font-size: 0.875rem;
-}
-
-.menu-header-nav-container > ul li > ul {
-  display: none;
-  position: absolute;
-  clear: both;
-  text-align: left;
-  margin-left: -4.25rem;
-  background: #fff;
-  background: rgba(241,241,241,0.75);
-  padding: 0.25rem 0.5rem;
-}
-
-/*.menu-header-nav-container > ul li > ul:before {
-  border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-bottom: 5px solid black;
-  content: "";
-}*/
-
-.menu-header-nav-container > ul li:hover > ul {
-  display: inline-block;
-}
-
-.menu-header-nav-container > ul li > ul li {
-  display: block;
-  clear: both;
-  float: none;
-}
-
-.menu-header-nav-container > ul li > ul li:before {
-  content: none;
-  margin-right: 0;
-}
-
-.site-logo:hover .logo-path {
-  fill: #52b9f1;
-  fill: #8dc63f;
-  fill: #e6670a;
-  transition: fill .25s ease;
 }

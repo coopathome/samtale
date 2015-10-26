@@ -1,0 +1,36 @@
+.site-nav {
+  font-size: 0.875rem;
+}
+
+.menu-header-nav-container > ul li > ul {
+  display: none;
+  position: absolute;
+  clear: both;
+  text-align: left;
+  margin-left: -4.25rem;
+  background-color: rgba(255,255,255,0.9);
+  border: 1px solid $subduedgrey;
+  padding: 0.25rem 0.5rem;
+  z-index: 10;
+  li {
+    border-bottom: 1px solid $subduedgrey;
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.menu-header-nav-container > ul li:hover > ul {
+  display: inline-block;
+}
+
+.menu-header-nav-container > ul li > ul li {
+  display: block;
+  clear: both;
+  float: none;
+}
+
+.menu-header-nav-container > ul li > ul li:before {
+  content: none;
+  margin-right: 0;
+}

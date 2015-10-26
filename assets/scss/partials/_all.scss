@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'reset';
+@import 'typography';
+@import 'objects';
+
+article {
+  background: #fff;
+  padding: 2rem 1.5rem;
+}
+
+@media only screen and (min-width: 321px)  {
+  article {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 500px)  {
+  article {
+    padding: 4rem;
+  }
+}
+
+.home article {
+  border-bottom: 1px solid $subduedgrey;
+}
+
+.postmetadata {
+  text-align: center;
+  padding-bottom: 2rem;
+}
