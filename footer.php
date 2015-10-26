@@ -36,7 +36,8 @@
 		ga('send', 'pageview');
 	</script>
 
-	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,300,300italic' rel='stylesheet' type='text/css'>
 
 	<script async>
 	$("h1").each(function() {

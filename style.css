@@ -57,14 +57,18 @@ body {
   background-image: url('assets/img/waves.svg');*/
   /*background-color: #e6eaed;*/
   font-family: Helvetica, sans-serif;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Sans Pro', 'Source Code Pro', monospace;
   font-weight: lighter;
   /*font-size: 22px;
   line-height: 41px;*/
   font-size: 0.875rem;
   line-height: 1.875rem;
-  color: #757575;
+  /*color: #757575;
+  color: #778590;*/
+  color: #455561;
   font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
 }
 
 @media only screen and (min-width: 500px)  {
@@ -165,7 +169,7 @@ header ul {
 }
 
 h1, h2, h3, h4 {
-  color: #333;
+  color: #333e48;
   font-family: helvetica;
 }
 
@@ -316,7 +320,7 @@ figcaption,
 }
 
 .current-menu-item:hover:after {
-  background-color: #444;
+  background-color: #333e48;
 }
 
 .post-comments {
@@ -504,4 +508,11 @@ td:last-of-type {
 .menu-header-nav-container > ul li > ul li:before {
   content: none;
   margin-right: 0;
+}
+
+.site-logo:hover .logo-path {
+  fill: #52b9f1;
+  fill: #8dc63f;
+  fill: #e6670a;
+  transition: fill .25s ease;
 }

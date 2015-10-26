@@ -23,7 +23,8 @@
 
 		<header id="header" class="site-header" role="banner">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/communications.svg" alt="Co-op Logo" class="site-logo">
+				<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/img/communications.svg" alt="Co-op Logo" class="site-logo"> -->
+				<?php include '_includes/logo.php' ?>
 			</a>
 
 			<div class="site-description">
