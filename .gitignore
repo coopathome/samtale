@@ -3,3 +3,4 @@
 *.esproj
 *.espressostorage
 node_modules
+_style.css
