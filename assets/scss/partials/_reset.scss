@@ -42,8 +42,8 @@ img {
 }
 
 // Mozilla dosen't style place holders by default
-input:-moz-placeholder { color:#a9a9a9; }
-textarea:-moz-placeholder { color:#a9a9a9; }
+input:-moz-placeholder { color: $grey; }
+textarea:-moz-placeholder { color: $grey; }
 
 // Reset font-smoothing on HiDPI screens
 @media (min-device-pixel-ratio: 2) {

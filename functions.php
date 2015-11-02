@@ -75,12 +75,20 @@
   }
 
   function my_login_stylesheet() {
-      wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/assets/css/login.css' );
+    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/assets/css/login.css' );
   }
   add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
-//OLD STUFF BELOW
+	function add_favicon() {
+  	// $favicon_url = get_stylesheet_directory_uri() . '/images/icons/admin-favicon.ico';
+		// echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+		include "_includes/icons.php";
+	}
+	// Now, just make sure that function runs when you're on the login page and admin pages
+	add_action('login_head', 'add_favicon');
+	add_action('admin_head', 'add_favicon');
 
+//OLD STUFF BELOW
 
 	// Load jQuery
 	if ( !function_exists( 'core_mods' ) ) {

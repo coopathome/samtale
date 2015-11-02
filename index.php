@@ -10,11 +10,14 @@
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-
-			<em>Posted by <?php the_author_posts_link() ?> on <a href="<?php the_permalink();?>"><?php the_date(); ?></a></em>
-      <br><br>
-
+			<h2 class="entry-title" style="margin-bottom: 0;">
+        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+      </h2>
+      <center>
+  			<em>Posted by <?php the_author_posts_link() ?> on <a href="<?php the_permalink();?>"><?php the_time('j F, Y'); ?></a></em>
+      </center>
+      <br>
+      <br>
 			<div class="entry">
 				<?php the_content(); ?>
 			</div>
@@ -22,15 +25,19 @@
 			<footer class="postmetadata">
 				<?php the_tags(__('Tags: ','html5reset'), ', ', '<br />'); ?>
 				<?php _e('Posted in','html5reset'); ?> <?php the_category(', ') ?><br>
-				<strong><a href="<?php the_permalink() ?>/#comments">Join the conversation</strong>
-        <?php comments_popup_link(__('No Comments &#187;','html5reset'), __('1 Comment &#187;','html5reset'), __('% Comments &#187;','html5reset')); ?>
+        <a href="<?php the_permalink() ?>#respond"><strong>Join the conversation</strong>
+          <?php comments_number( 'No comments yet &#187', '1 Comment &#187', '% Comments &#187' ); ?>
+          <?php // comments_popup_link(__('No Comments &#187;','html5reset'), __('1 Comment &#187;','html5reset'), __('% Comments &#187;','html5reset')); ?>
+        </a>
 			</footer>
 
 		</article>
 
 	<?php endwhile; ?>
 
-	<?php post_navigation(); ?>
+	<div class="index-navigation">
+    <?php post_navigation(); ?>
+  </div>
 
 	<?php else : ?>
 

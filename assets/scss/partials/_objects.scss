@@ -21,7 +21,7 @@ table {
 }
 
 tr {
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid $subduedgrey;
   border-bottom: 1px solid #eee;
 }
 
@@ -35,7 +35,7 @@ td {
 
 @media (max-width: 600px) {
   tr:nth-of-type(2n) {
-    background: #f1f1f1;
+    background: $subduedgrey;
   }
 }
 

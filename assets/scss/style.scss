@@ -1,6 +1,6 @@
 /*!
 Theme Name: Samtale
-Theme URI: http://design.coopathome.ca
+Theme URI: https://github.com/coopathome/samtale
 Description: Named after the Norwegian word for conversation, this is a custom theme built for internal communications of Winkler Co-op.
 Author: Co-op@home
 Author URI: http://design.coopathome.ca
@@ -70,7 +70,9 @@ footer {
 }
 
 .site-logo {
-  height: 4rem;
+  height: 3rem;
+  width: 3rem;
+  margin-top: 0.5rem;
 }
 
 a img:hover {
@@ -139,7 +141,8 @@ figcaption,
   margin-right: none;
 }
 
-.current-menu-item:after {
+#menu-header-nav > .current-menu-item:after,
+.current-menu-parent:after {
   content: "";
   display: inline-block;
   height: 0.375rem;
@@ -151,6 +154,12 @@ figcaption,
   margin-left: 50%;
   left: -0.1875rem;
   background-color: #6cad26;
+
+  -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 0.5s; /* Firefox < 16 */
+      -ms-animation: fadein 0.5s; /* Internet Explorer */
+       -o-animation: fadein 0.5s; /* Opera < 12.1 */
+          animation: fadein 0.5s;
 }
 
 .current-menu-item:hover:after {
@@ -208,7 +217,7 @@ img.avatar.avatar-26.photo {
 
 #commentform input[type=submit] {
   border: 1px solid #323E48;
-  margin-top: -2.125rem;
+  //margin-top: -2.125rem;
   padding: 0.5rem 1rem;
 }
 
@@ -261,13 +270,18 @@ body #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
 body {
   // background-color: #f1f1f1;
   background-color: $subduedgrey;
-  // background-color: $white;
-  // background-image: url('assets/img/waves.svg');
-  // background-color: #e6eaed;
+  background-color: $white;
+  background-color: #e6eaed;
+  background-image: url('assets/img/waves.svg');
 }
 
 .home article {
-
+  //box-shadow: 0px 5px 10px #C1C9CB;
+  margin-bottom: 2rem;
+  //border-top-left-radius: 1rem;
+  //border-top-right-radius: 1rem;
+  //border-bottom-left-radius: 0;
+  //border-bottom-right-radius: 1rem;
 }
 
 .site-logo {

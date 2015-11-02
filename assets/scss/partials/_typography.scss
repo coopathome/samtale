@@ -11,7 +11,10 @@ body {
   color: $darkgrey;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: $black;
   font-family: $headingtype;
 }
@@ -24,7 +27,7 @@ h1 {
   line-height: 3.25rem;
 }
 
-@media only screen and (min-width: 500px)  {
+@media only screen and (min-width: 600px)  {
   h1 {
     font-size: 3rem;
     line-height: 4.25rem;
@@ -38,13 +41,12 @@ h2 {
   line-height: 2.75rem;
 }
 
-@media only screen and (min-width: 500px)  {
+@media only screen and (min-width: 600px)  {
   h2 {
     font-size: 2rem;
     line-height: 3.25rem;
   }
 }
-
 
 p {
   margin-bottom: 36px;
@@ -105,7 +107,54 @@ mark {
   font-feature-settings: "c2sc" 1, "smcp" 1;
 }
 
+.site-footer {
+  font-family: $mono;
+  font-size: 1rem;
+}
+
+.page-id-44 article {
+  font-family: $mono;
+  font-size: 1.125rem;
+}
+
+.entry-title {
+  text-align: center;
+}
+
+.post-edit-link {
+  text-align: center;
+  display: block;
+  &:before {
+    content: "\f464";
+    font-family: dashicons;
+    padding-right: 2px;
+    //padding: 3px;
+    //border-top-left-radius: 1rem;
+    //border-top-right-radius: 1rem;
+    //border-bottom-left-radius: 0;
+    //border-bottom-right-radius: 1rem;
+    //background: $grey;
+    //color: $white;
+    //clear: both;
+    //margin-right: 1rem;
+  }
+}
+
 // .postmetadata {
 //   font-family: $mono;
 //   font-size: 1rem;
 // }
+
+.parent-link {
+  text-align: center;
+  display: block;
+}
+
+.subpage-nav {
+  display: block;
+  overflow: hidden;
+  list-style: none;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-left: 0;
+}

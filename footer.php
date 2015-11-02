@@ -5,7 +5,7 @@
  * @since HTML5 Reset 2.0
  */
 ?>
-		<footer id="footer" class="source-org vcard copyright" role="contentinfo">
+		<footer id="footer" class="source-org vcard copyright site-footer" role="contentinfo">
 			  <span class="footer-copyright">
 					&copy; <?php
 			    $fromYear = 2015;
