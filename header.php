@@ -30,7 +30,12 @@
 			<div class="site-description">
 				<?php bloginfo( 'description' ); ?><br>
 				<em><a href="<?php echo esc_url( home_url( '/beta/' ) ); ?>">βeta</a></em> •
-				<a href="<?php echo esc_url( home_url( '/login/' ) ); ?>">Login</a>
+				<?php if ( is_user_logged_in() ) { ?>
+					<a href="<?php echo esc_url( home_url( '/user/' ) ); $user_ID = get_current_user_id(); ?> ">Account</a> • <a href="<?php echo esc_url( home_url( '/logout/' ) ); ?>">Log Out</a>
+				<?php } else { ?>
+					<a href="<?php echo esc_url( home_url( '/login/' ) ); ?>">Log In</a>
+				<?php } ?>
+				<!-- <a href="<?php echo esc_url( home_url( '/login/' ) ); ?>">Login</a> -->
 			</div>
 
 			<nav id="nav" class="site-nav" role="navigation">
