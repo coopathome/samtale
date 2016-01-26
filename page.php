@@ -12,11 +12,11 @@
 
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 
-    <?php if($post->post_parent) {
-      $parent = $wpdb->get_row("SELECT post_title FROM $wpdb->posts WHERE ID = $post->post_parent");
-      $parent_link = get_permalink($post->post_parent); ?>
-      <a href="<?php echo $parent_link; ?>" class="parent-link">&larr; Back to <strong><?php echo $parent->post_title; ?></strong></a>
-    <?php } ?>
+      <?php if($post->post_parent) {
+        $parent = $wpdb->get_row("SELECT post_title FROM $wpdb->posts WHERE ID = $post->post_parent");
+        $parent_link = get_permalink($post->post_parent); ?>
+        <a href="<?php echo $parent_link; ?>" class="parent-link">&larr; Back to <strong><?php echo $parent->post_title; ?></strong></a>
+      <?php } ?>
 
       <?php	$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) ); ?>
       <ul class="subpage-nav">
@@ -28,11 +28,8 @@
       </ul>
 
 			<div class="entry">
-
 				<?php the_content(); ?>
-
 				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
-
 			</div>
 
 			<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>

@@ -6,6 +6,10 @@
  */
  get_header(); ?>
 
+  <a class="alert alert--positive dev-note" style="font-size: 1rem;" href="<?php echo esc_url( home_url( '/account/' ) ); ?>">
+    Get email updates by adding your email address at <em>Account > <span class="dashicons dashicons-admin-generic" style="margin: 0.25rem 0 -0.25rem;"></span> > My Account > E-mail Address</em>.
+  </a>
+
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">

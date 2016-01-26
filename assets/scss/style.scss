@@ -250,7 +250,7 @@ img.avatar.avatar-26.photo {
   text-align: right;
 }
 
-/* ADMIN BAR */
+// ADMIN BAR
 
 div#wpadminbar {
   background: #c6cfd5;
@@ -267,14 +267,6 @@ body #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
 @import 'partials/all';
 @import 'modules/all';
 
-body {
-  // background-color: #f1f1f1;
-  background-color: $subduedgrey;
-  background-color: $white;
-  background-color: #e6eaed;
-  background-image: url('assets/img/waves.svg');
-}
-
 .home article {
   //box-shadow: 0px 5px 10px #C1C9CB;
   margin-bottom: 2rem;
@@ -286,10 +278,11 @@ body {
 
 .site-logo {
   &:hover .logo-path {
-    fill: #52b9f1;
-    fill: #8dc63f;
-    fill: #e6670a;
-    fill: $orange;
+    //fill: #52b9f1;
+    //fill: #8dc63f;
+    //fill: #e6670a;
+    //fill: $orange;
+    fill: $green;
     // transform: rotate(10deg);
   }
 }

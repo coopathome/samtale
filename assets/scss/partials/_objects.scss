@@ -52,3 +52,28 @@ td {
 td:last-of-type {
   border-right: none;
 }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  outline: none;
+  border: 1px solid $white;
+  padding: 0.25rem;
+  &:focus {
+    border: 1px solid $green;
+  }
+}
+
+input[type="submit"] {
+  background: $blue;
+  margin: 0;
+}
+
+.btn,
+button,
+.wp-polls .Buttons {
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $green;
+  }
+}

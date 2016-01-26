@@ -43,4 +43,17 @@
 
 	<?php wp_head(); ?>
 
+	<style>
+		/*.site-logo:hover {
+			background-image: url('<?php bloginfo('template_directory'); ?>/assets/img/death-star.png');
+			background-size: cover;
+			background-position: center center;
+			transition: 0.25s;
+			transform: scale(1.25);
+		}
+		.site-logo:hover path {
+			opacity: 0;
+		}*/
+	</style>
+
 </head>

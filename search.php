@@ -6,9 +6,11 @@
  */
  get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+  <h1><?php _e('Search Results for','html5reset'); ?> <em><?php echo get_search_query(); ?></em></h1>
 
-		<h2><?php _e('Search Results for','html5reset'); ?> <em><?php echo get_search_query(); ?></em></h2>
+  <?php get_search_form(); ?>
+
+	<?php if (have_posts()) : ?>
 
 		<?php post_navigation(); ?>
 
@@ -16,9 +18,13 @@
 
 			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-				<h2><?php the_title(); ?></h2>
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-				<?php posted_on(); ?>
+				<?php if($post->post_type == 'post') :?>
+          <?php posted_on(); ?>
+        <?php elseif($post->post_type == 'page') :?>
+          <span>Page</span>
+        <?php endif; ?>
 
 				<div class="entry">
 

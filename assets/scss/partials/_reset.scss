@@ -33,7 +33,12 @@ input,
 textarea {
   font-size: inherit;
   font-family: inherit;
-  -webkit-appearance: none;
+}
+
+button,
+textarea,
+input[type=radio] {
+  -webkit-appearance: normal;
 }
 
 img {

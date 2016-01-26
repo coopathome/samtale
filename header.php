@@ -18,13 +18,13 @@
 
 <body <?php body_class(); ?>>
 
-	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 	<div id="wrapper">
 
 		<header id="header" class="site-header" role="banner">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/img/communications.svg" alt="Co-op Logo" class="site-logo"> -->
 				<?php include '_includes/logo.php' ?>
+				<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/img/death-star-communicator.png" class="site-logo"> -->
 			</a>
 
 			<div class="site-description">
