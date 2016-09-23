@@ -27,9 +27,7 @@
         <?php endif; ?>
 
 				<div class="entry">
-
 					<?php the_excerpt(); ?>
-
 				</div>
 
 			</article>

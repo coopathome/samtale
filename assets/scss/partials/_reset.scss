@@ -12,7 +12,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "liga" 1, "kern" 1;
+  font-feature-settings: 'liga' 1, 'kern' 1;
   font-kerning: normal;
 
   -webkit-font-smoothing: antialiased;
@@ -37,7 +37,7 @@ textarea {
 
 button,
 textarea,
-input[type=radio] {
+input[type='radio'] {
   -webkit-appearance: normal;
 }
 

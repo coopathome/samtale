@@ -10,50 +10,19 @@ Version: 1.0
 #wrapper,
 .wrapper {
   width: 90%;
-  max-width: 960px;
+  //max-width: 960px;
+  //max-width: 60rem;
+  max-width: 64rem;
   margin: auto;
+  display: block;
+  overflow: hidden;
 }
 
-.content {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
+//.content {
+//  padding-left: 4rem;
+//  padding-right: 4rem;
+//}
 
-@media only screen and (min-width: 500px)  {
-  body {
-    font-size: 1rem;
-    line-height: 36px;
-  }
-}
-
-a {
-  color: #c00;
-  color: #d31145;
-  /*color: #53b9f1;*/
-  text-decoration: none;
-}
-
-a:hover {
-  color: #c00a26;
-  color: #6cad26;
-  text-decoration: underline;
-}
-
-
-.post-comments {
-  background-color: #fff;
-  background-color: rgba(255,255,255,0.875);
-  padding: 2rem 4rem 4rem;
-  border-top: 2px solid #f1f1f1;
-}
-
-::-moz-selection{background: #c00; color: #fff; text-shadow: none;}
-::selection {background: #c00; color: #fff; text-shadow: none;}
-
-
-footer {
-  padding: 4rem;
-}
 
 .post-author {
   text-align: center;
@@ -64,86 +33,21 @@ footer {
   margin-bottom: 1.25rem;
 }
 
-.site-header {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-.site-logo {
-  height: 3rem;
-  width: 3rem;
-  margin-top: 0.5rem;
-}
-
-a img:hover {
-  opacity: 0.75;
+a {
+  img {
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 }
 
 .footer-credit {
   float: right;
 }
 
-textarea {
-  outline: none;
-}
-
-textarea:focus {
-  border-color: #6cad26;
-}
-
-.alignright {
-  float: right;
-  max-width: 50%;
-  margin-left: 2rem;
-}
-
-.alignleft {
-  float: left;
-  max-width: 50%;
-  margin-right: 2rem;
-}
-
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-}
-
-figcaption,
-.wp-caption-text {
-  font-size: 0.75rem;
-  text-align: center;
-  font-style: italic;
-}
-
-.site-description {
-  float: right;
-}
-
-.site-nav {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.site-nav li {
-  display: inline-block;
-}
-
-.site-nav li:before {
-  content: "|";
-  margin-right: 0.5rem;
-  opacity: 0.25;
-}
-
-.site-nav li:first-of-type:before {
-  content: none;
-  margin-right: none;
-}
-
 #menu-header-nav > .current-menu-item:after,
 .current-menu-parent:after {
-  content: "";
+  content: '';
   display: inline-block;
   height: 0.375rem;
   width: 0.375rem;
@@ -155,19 +59,17 @@ figcaption,
   left: -0.1875rem;
   background-color: #6cad26;
 
-  -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 0.5s; /* Firefox < 16 */
-      -ms-animation: fadein 0.5s; /* Internet Explorer */
-       -o-animation: fadein 0.5s; /* Opera < 12.1 */
+  -webkit-animation: fadein 0.5s; // Safari, Chrome and Opera > 12.1
+     -moz-animation: fadein 0.5s; // Firefox < 16
+      -ms-animation: fadein 0.5s; // Internet Explorer
+       -o-animation: fadein 0.5s; // Opera < 12.1
           animation: fadein 0.5s;
 }
 
-.current-menu-item:hover:after {
-  background-color: #333e48;
-}
-
-.post-comments {
-  font-size: 0.875rem;
+.current-menu-item {
+  &:hover:after {
+    background-color: #333e48;
+  }
 }
 
 .post-comments-list {
@@ -175,28 +77,21 @@ figcaption,
   margin-bottom: 2rem;
 }
 
-.post-comments .comment p:last-of-type {
-  margin-bottom: 0;
-}
+.comment {
+  .children {
+    overflow: visible;
+    padding-left: 2rem;
+    //border-left: 1px solid #c00;
+    border-left: 2px solid #f1f1f1;
+    margin-left: 0;
 
-.post-comments .reply {
-  margin-bottom: 2rem;
-}
-
-.comment .children {
-  overflow: visible;
-  padding-left: 2rem;
-  border-left: 1px solid #c00;
-  border-left: 2px solid #f1f1f1;
-  margin-left: 0;
-}
-
-.comment .children .children {
-  border-color: #8dc63f;
-}
-
-.comment .children .children .children {
-  border-color: #71cef5;
+    .children {
+      border-color: #8dc63f;
+    }
+    .children .children {
+      border-color: #71cef5;
+    }
+  }
 }
 
 li.comment {
@@ -215,21 +110,38 @@ img.avatar.avatar-26.photo {
   border-radius: 100%;
 }
 
-#commentform input[type=submit] {
-  border: 1px solid #323E48;
-  //margin-top: -2.125rem;
-  padding: 0.5rem 1rem;
-}
+@import 'partials/all';
+@import 'modules/all';
 
-#commentform input[type=submit]:hover {
-  background: #8dc63f;
-  color: #fff;
-}
-
-.post-nav {
-  overflow: hidden;
-  background: white;
+.post-comments {
+  background-color: rgba($white, 0.875);
+  padding: $line-height $line-height-2x $line-height-2x;
   border-top: 2px solid #f1f1f1;
+  //border-top: 2px solid $subduedgrey;
+  font-size: $small-font-size;
+
+  .comment {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .reply {
+    margin-bottom: $line-height;
+  }
+}
+
+#commentform {
+  input[type='submit'] {
+    border: 1px solid $black;
+    //margin-top: -2.125rem;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
+  }
 }
 
 .post-nav-next,
@@ -239,56 +151,39 @@ img.avatar.avatar-26.photo {
   padding: 2rem;
 }
 
-.post-nav-prev {
-  border-right: 1px solid #f1f1f1;
-  height: 100%;
-}
-
-.post-nav-next {
-  border-left: 1px solid #f1f1f1;
-  height: 100%;
-  text-align: right;
-}
-
 // ADMIN BAR
 
 div#wpadminbar {
-  background: #c6cfd5;
+  background: $lightgrey;
 }
 
 body #wpadminbar .ab-top-menu>li.hover>.ab-item,
 body #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
 body #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
 body #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
-  background-color: #8dc63f;
-  color: #fff;
+  background-color: $green;
+  color: $white;
 }
 
-@import 'partials/all';
-@import 'modules/all';
-
-.home article {
-  //box-shadow: 0px 5px 10px #C1C9CB;
-  margin-bottom: 2rem;
-  //border-top-left-radius: 1rem;
-  //border-top-right-radius: 1rem;
-  //border-bottom-left-radius: 0;
-  //border-bottom-right-radius: 1rem;
+.post-nav {
+  overflow: hidden;
+  background: $white;
+  border-top: 2px solid $subduedgrey;
 }
 
-.site-logo {
-  &:hover .logo-path {
-    //fill: #52b9f1;
-    //fill: #8dc63f;
-    //fill: #e6670a;
-    //fill: $orange;
-    fill: $green;
-    // transform: rotate(10deg);
-  }
+.post-nav-prev {
+  border-right: 1px solid $subduedgrey;
+  height: 100%;
+}
+
+.post-nav-next {
+  border-left: 1px solid $subduedgrey;
+  height: 100%;
+  text-align: right;
 }
 
 // Print styles!
 
-@media print {
-
-}
+//@media print {
+//
+//}

@@ -18,27 +18,46 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="wrapper">
-
-		<header id="header" class="site-header" role="banner">
+	<header id="header" class="site-header" role="banner">
+		<div class="wrapper">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/img/communications.svg" alt="Co-op Logo" class="site-logo"> -->
 				<?php include '_includes/logo.php' ?>
 				<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/img/death-star-communicator.png" class="site-logo"> -->
 			</a>
 
-			<div class="site-description">
-				<?php bloginfo( 'description' ); ?><br>
-				<em><a href="<?php echo esc_url( home_url( '/beta/' ) ); ?>">βeta</a></em> •
+			<nav id="nav" class="site-nav header-nav" role="navigation">
+				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => '', 'menu_class' => 'header-nav__list') ); ?>
+
 				<?php if ( is_user_logged_in() ) { ?>
-					<a href="<?php echo esc_url( home_url( '/user/' ) ); $user_ID = get_current_user_id(); ?> ">Account</a> • <a href="<?php echo esc_url( home_url( '/logout/' ) ); ?>">Log Out</a>
+					<a href="<?php echo esc_url( home_url( '/user/' ) ); $user_ID = get_current_user_id(); ?> " class="menu-item">Account</a>
+					<a href="<?php echo esc_url( home_url( '/logout/' ) ); ?>" class="menu-item">Log Out</a>
 				<?php } else { ?>
-					<a href="<?php echo esc_url( home_url( '/login/' ) ); ?>">Log In</a>
+					<a href="<?php echo esc_url( home_url( '/login/' ) ); ?>" class="menu-item">Log In</a>
 				<?php } ?>
 				<!-- <a href="<?php echo esc_url( home_url( '/login/' ) ); ?>">Login</a> -->
-			</div>
 
-			<nav id="nav" class="site-nav" role="navigation">
-				<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
 			</nav>
-		</header>
+		</div>
+	</header>
+
+	<?php
+		if(is_home() || is_front_page()) $page_banner_title = 'Co-op News';
+		include '_includes/page-header.php';
+	?>
+
+	<?php if(is_home()) { ?>
+		<!-- <div class="wrapper">
+			<a class="alert alert--positive dev-note" href="<?php echo esc_url( home_url( '/account/' ) ); ?>">
+		    Get email updates by adding your email address at <em>Account > <span class="dashicons dashicons-admin-generic"></span> > My Account > E-mail Address</em>.
+		  </a>
+		</div> -->
+	<?php }; ?>
+
+	<div class="wrapper">
+		<!-- <aside class="sidebar-nav">
+			<nav id="nav" class="site-nav header-nav" role="navigation">
+				<?php // wp_nav_menu( array('theme_location' => 'primary', 'container' => '', 'menu_id' => 'sidebar-nav') ); ?>
+			</nav>
+		</aside> -->
+		<main class="content">

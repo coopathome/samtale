@@ -3,27 +3,27 @@
 //}
 
 body {
-  // background-color: #f1f1f1;
+  //background-color: #e6eaed;
+  //background-image: url('assets/img/waves.svg');
   //background-color: $subduedgrey;
-  //background-color: $white;
-  background-color: #e6eaed;
-  background-image: url('assets/img/waves.svg');
+  background-image: linear-gradient(rgba($red, 0.075), rgba($white, 0.075));
 }
 .wp-polls {
   display: block;
   text-align: center;
 }
+
 .wp-polls-form {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid $subduedgrey;
-  padding: 1rem 1.25rem 1rem 1rem;
+  padding: 1rem $line-height 1rem 1rem;
   float: none;
 }
 
 .wp-polls .Buttons {
-  border: none !important;
+  border: 0 none !important;
   background: $grey !important;
   color: $white;
   //text-transform: lowercase;
@@ -39,9 +39,33 @@ body {
 .alert {
   background-color: $blue;
   color: $white;
-  padding: 1rem;
+  padding-top: #{0.5 * $line-height};
+  padding-bottom: #{0.5 * $line-height};
+  padding-right: #{0.5 * $line-height};
+  padding-left: #{0.5 * $line-height};
   margin-bottom: $line-height;
   display: block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  font-size: $small-font-size;
+
+  line-height: #{0.875 * $line-height-unitless};
+
+  &--positive {
+    //background: $white;
+    background-color: $green;
+  }
+
+  &--caution {
+    background-color: $yellow;
+  }
+
+  &--negative {
+    background-color: $red;
+  }
+
 }
 
 .alert a,
@@ -52,20 +76,6 @@ a.alert {
   }
 }
 
-.alert--positive {
-  //background: $white;
-  background-color: $green;
-}
-
-.alert--caution {
-  background-color: $yellow;
-}
-
-.alert--negative {
-  background-color: $red;
-}
-
 .dev-note {
   font-family: $mono, 'Open Sans';
-  font-size: 1rem;
 }

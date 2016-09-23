@@ -1,0 +1,131 @@
+.sidebar-nav {
+  //font-family: $headingtype;
+
+  @media screen and (min-width: 768px) {
+    width: 18.75%;
+    float: left;
+    margin-right: 2.5%;
+  }
+
+  .menu-item {
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    &:before {
+      content: '';
+      display: none;
+    }
+  }
+
+  .sub-menu {
+    padding-left: #{ 0.5 * $line-height };
+    margin-left: 0;
+    font-size: $small-font-size;
+  }
+
+}
+
+//.content {
+//  @media screen and (min-width: 768px) {
+//    width: 78.75%;
+//    float: left;
+//  }
+//}
+
+.page-banner {
+  padding-top: $line-height-2x;
+  padding-bottom: $line-height-2x;
+  background-color: $red;
+  color: $white;
+  display: block;
+  margin-top: -$line-height;
+  margin-bottom: $line-height-2x;
+  h1 {
+    color: inherit;
+    margin-bottom: 0;
+    text-align: left;
+    font-family: 'Source Sans Pro';
+
+  }
+}
+
+.page-banner__title {
+  float: left;
+}
+
+.page-banner__updated {
+  float: right;
+  padding-top: $line-height;
+  font-size: $small-font-size;
+  font-style: italic;
+}
+
+.post--preview {
+  display: block;
+  padding-bottom: $line-height;
+  margin-bottom: $line-height;
+}
+
+.subpage-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+
+  li {
+    width: 48.75%;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    display: inline-block;
+    float: left;
+    padding: 1rem;
+    border: 1px solid $lightgrey;
+    border-radius: 1rem 1rem 1rem 0;
+
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+
+  }
+}
+
+.sidebar {
+  @media (min-width: 768px) {
+    width: 23.75%;
+    margin-right: 2.5%;
+    float: left;
+  }
+}
+
+.page-entry {
+  @media (min-width: 768px) {
+    width: 73.75%;
+    float: left;
+  }
+  &::after {
+    clear: both;
+    content: '';
+    height: 0;
+    display: block;
+  }
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin-left: 0;
+
+  li {
+    padding: 0.25rem;
+    padding-left: 0;
+    border-top: 1px solid $lightgrey;
+    transition-duration: 0.125s;
+    &:hover {
+      background-color: $subduedgrey;
+      padding-left: 0.25rem;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+}

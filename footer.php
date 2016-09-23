@@ -5,19 +5,22 @@
  * @since HTML5 Reset 2.0
  */
 ?>
-		<footer id="footer" class="source-org vcard copyright site-footer" role="contentinfo">
-			  <span class="footer-copyright">
-					&copy; <?php
-			    $fromYear = 2015;
-			    $thisYear = (int)date('Y');
-			    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Winkler Co-op
-				</span>
-				<span class="footer-credit">
-					Built by <a href="http://design.coopathome.ca">Co-op@home</a>
-				</span>
-		</footer>
+	</main>
+	</div><?php // close wrapper ?>
 
-	</div>
+	<footer id="footer" class="source-org vcard copyright site-footer" role="contentinfo">
+		<div class="wrapper">
+			<span class="footer-copyright">
+				&copy; <?php
+				$fromYear = 2015;
+				$thisYear = (int)date('Y');
+				echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Winkler Co-op
+			</span>
+			<span class="footer-credit">
+				Built by <a href="http://design.coopathome.ca">Co-op@home</a>
+			</span>
+		</div>
+	</footer>
 
 	<?php wp_footer(); ?>
 
@@ -40,13 +43,13 @@
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,300,300italic' rel='stylesheet' type='text/css'>
 
 	<script async>
-	$("h1").each(function() {
-		var wordArray = $(this).text().split(" ");
-		if (wordArray.length > 1) {
-			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
-			wordArray.pop();
-			$(this).html(wordArray.join(" "));
-		}
+		$("h1").each(function() {
+			var wordArray = $(this).text().split(" ");
+			if (wordArray.length > 1) {
+				wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+				wordArray.pop();
+				$(this).html(wordArray.join(" "));
+			}
 		});
 	</script>
 

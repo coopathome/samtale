@@ -8,14 +8,32 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article class="post" id="post-<?php the_ID(); ?>">
+    <aside class="sidebar">
+      <?php
+      if($post->post_parent){
+        $parent = $wpdb->get_row("SELECT post_title FROM $wpdb->posts WHERE ID = $post->post_parent");
+        $parent_link = get_permalink($post->post_parent);
+        $children = wp_list_pages("title_li=&include=".$post->post_parent."&echo=0");
+        $children .= wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+      } else {
+        $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+      }
+      if ($children) { ?>
+        <a href="<?php echo $parent_link; ?>" class="parent-link"><strong><?php echo $parent->post_title; ?></strong></a>
+        <ul class="submenu sidebar-menu">
+          <?php echo $children; ?>
+        </ul>
+      <?php } ?>
+    </aside>
 
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+		<article class="page page-entry" id="post-<?php the_ID(); ?>">
+
+			<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
 
       <?php if($post->post_parent) {
-        $parent = $wpdb->get_row("SELECT post_title FROM $wpdb->posts WHERE ID = $post->post_parent");
-        $parent_link = get_permalink($post->post_parent); ?>
-        <a href="<?php echo $parent_link; ?>" class="parent-link">&larr; Back to <strong><?php echo $parent->post_title; ?></strong></a>
+        // $parent = $wpdb->get_row("SELECT post_title FROM $wpdb->posts WHERE ID = $post->post_parent");
+        // $parent_link = get_permalink($post->post_parent); ?>
+        <!-- <a href="<?php echo $parent_link; ?>" class="parent-link">&larr; Back to <strong><?php echo $parent->post_title; ?></strong></a> -->
       <?php } ?>
 
       <?php	$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) ); ?>

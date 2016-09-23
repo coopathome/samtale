@@ -31,12 +31,12 @@
 			wp_enqueue_script( 'comment-reply' );
 
 		// Load Stylesheets
-//		wp_enqueue_style( 'html5reset-reset', get_template_directory_uri() . '/reset.css' );
-//		wp_enqueue_style( 'html5reset-style', get_stylesheet_uri() );
+		// wp_enqueue_style( 'html5reset-reset', get_template_directory_uri() . '/reset.css' );
+		// wp_enqueue_style( 'html5reset-style', get_stylesheet_uri() );
 
 		// Load IE Stylesheet.
-//		wp_enqueue_style( 'html5reset-ie', get_template_directory_uri() . '/css/ie.css', array( 'html5reset-style' ), '20130213' );
-//		$wp_styles->add_data( 'html5reset-ie', 'conditional', 'lt IE 9' );
+		// wp_enqueue_style( 'html5reset-ie', get_template_directory_uri() . '/css/ie.css', array( 'html5reset-style' ), '20130213' );
+		// $wp_styles->add_data( 'html5reset-ie', 'conditional', 'lt IE 9' );
 
 		// Modernizr
 		// This is an un-minified, complete version of Modernizr. Before you move to production, you should generate a custom build that only has the detects you need.
@@ -52,15 +52,15 @@
 		if ( is_feed() )
 			return $title;
 
-//		 Add the site name.
+		//  Add the site name.
 		$title .= get_bloginfo( 'name' );
 
-//		 Add the site description for the home/front page.
+		//  Add the site description for the home/front page.
 		$site_description = get_bloginfo( 'description', 'display' );
 		if ( $site_description && ( is_home() || is_front_page() ) )
 			$title = "$title $sep $site_description";
 
-//		 Add a page number if necessary.
+		//  Add a page number if necessary.
 		if ( $paged >= 2 || $page >= 2 )
 			$title = "$title $sep " . sprintf( __( 'Page %s', 'html5reset' ), max( $paged, $page ) );
 
@@ -103,11 +103,11 @@
 	}
 
 	// Clean up the <head>, if you so desire.
-	//	function removeHeadLinks() {
-	//    	remove_action('wp_head', 'rsd_link');
-	//    	remove_action('wp_head', 'wlwmanifest_link');
-	//    }
-	//    add_action('init', 'removeHeadLinks');
+	// function removeHeadLinks() {
+	// 	remove_action('wp_head', 'rsd_link');
+	// 	remove_action('wp_head', 'wlwmanifest_link');
+	// }
+	// add_action('init', 'removeHeadLinks');
 
 	// Custom Menu
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );

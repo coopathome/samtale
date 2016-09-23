@@ -6,34 +6,32 @@
  */
  get_header(); ?>
 
-  <a class="alert alert--positive dev-note" style="font-size: 1rem;" href="<?php echo esc_url( home_url( '/account/' ) ); ?>">
-    Get email updates by adding your email address at <em>Account > <span class="dashicons dashicons-admin-generic" style="margin: 0.25rem 0 -0.25rem;"></span> > My Account > E-mail Address</em>.
-  </a>
+ <?php if ( is_user_logged_in() ) { ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<article class="post post--preview" id="post-<?php the_ID(); ?>">
 
 			<h2 class="entry-title" style="margin-bottom: 0;">
         <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
       </h2>
-      <center>
-  			<em>Posted by <?php the_author_posts_link() ?> on <a href="<?php the_permalink();?>"><?php the_time('j F, Y'); ?></a></em>
-      </center>
+
+  		<em>Posted by <?php the_author_posts_link() ?> on <a href="<?php the_permalink();?>"><?php the_time('j F, Y'); ?></a></em>
+
       <br>
       <br>
-			<div class="entry">
+			<div class="entry post__entry">
 				<?php the_content(); ?>
 			</div>
 
-			<footer class="postmetadata">
+			<aside class="postmetadata post__meta">
 				<?php the_tags(__('Tags: ','html5reset'), ', ', '<br />'); ?>
 				<?php _e('Posted in','html5reset'); ?> <?php the_category(', ') ?><br>
         <a href="<?php the_permalink() ?>#respond"><strong>Join the conversation</strong>
           <?php comments_number( 'No comments yet &#187', '1 Comment &#187', '% Comments &#187' ); ?>
           <?php // comments_popup_link(__('No Comments &#187;','html5reset'), __('1 Comment &#187;','html5reset'), __('% Comments &#187;','html5reset')); ?>
         </a>
-			</footer>
+			</aside>
 
 		</article>
 
@@ -48,6 +46,13 @@
 		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
 
 	<?php endif; ?>
+
+<?php } else { ?>
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hub-hero-colour.jpg" >
+  <h1>Please <a href="<?php bloginfo('url');?>/login">sign in</a> with your CRS ID.</h1>
+  <p>Talk to your manager if you need help with your CRS ID.</p>
+  <a href="<?php bloginfo('url');?>/login" class="um-button um-alt [btn]">Sign In</a>
+<?php } ?>
 
 <?php // get_sidebar(); ?>
 

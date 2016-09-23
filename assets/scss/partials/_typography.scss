@@ -1,14 +1,23 @@
-$line-height: 1.875rem;
-$bodytype: 'Source Sans Pro', Helvetica, sans-serif;
+$base-font-size: 1.125rem;
+$small-font-size: #{0.75 * $base-font-size};
+$line-height-unitless: 1.55;
+$line-height: #{$line-height-unitless * $base-font-size};
+$line-height-2x: #{2 * $line-height};
+$bodytype: 'Source Sans Pro', Helvetica, -apple-system, sans-serif;
 $headingtype: helvetica, sans-serif;
 $mono: 'Source Code Pro', monospace;
 
 body {
   font-family: $bodytype;
-  font-size: 1.125rem;
-  line-height: $line-height;
+  font-size: $base-font-size;
   font-weight: 300;
   color: $darkgrey;
+  line-height: $line-height-unitless;
+
+  @media (max-width: 500px)  {
+    font-size: 1rem;
+  }
+
 }
 
 h1,
@@ -21,56 +30,61 @@ h4 {
 
 h1 {
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: $line-height;
+  font-size: #{1.77 * $base-font-size};
   text-align: center;
-  font-size: 2rem;
-  line-height: 3.25rem;
-}
 
-@media only screen and (min-width: 600px)  {
-  h1 {
-    font-size: 3rem;
-    line-height: 4.25rem;
+  @media only screen and (min-width: 600px)  {
+    font-size: #{2.44 * $base-font-size};
   }
+
 }
 
 h2 {
   margin-bottom: 2rem;
   font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 2.75rem;
-}
+  font-size: #{1.33 * $base-font-size};
 
-@media only screen and (min-width: 600px)  {
-  h2 {
-    font-size: 2rem;
-    line-height: 3.25rem;
+  @media only screen and (min-width: 600px)  {
+    font-size: #{1.77 * $base-font-size};
   }
 }
 
 p {
-  margin-bottom: 36px;
+  //margin-bottom: 36px;
   margin-bottom: $line-height;
 }
 
-blockquote {
-  /*border-left: 2px solid #c00;*/
-  padding-left: 2rem;
-  font-style: italic;
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $green;
+    text-decoration: underline;
+  }
 }
 
-blockquote:before {
-  content: "“";
-  display: inline-block;
-  position: absolute;
-  color: #eee;
-  font-size: 4rem;
-  margin-left: -3.5rem;
+blockquote {
+  //border-left: 2px solid #c00;
+  font-style: italic;
+  padding-left: $line-height;
+
+  &:before {
+    //color: #eee;
+    color: $lightgrey;
+    position: absolute;
+    content: '“';
+    display: inline-block;
+    font-size: 4rem;
+    margin-left: -3.5rem;
+  }
+
 }
 
 ul,
 ol {
-  margin-bottom: 2rem;
+  margin-bottom: $line-height;
   margin-left: 1.25rem;
 }
 
@@ -81,13 +95,11 @@ ul {
   }
 }
 
-header ul {
-  list-style: none;
-  margin-left: 0;
-}
-
-a {
-  color: $red;
+header {
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
 }
 
 ins {
@@ -103,62 +115,6 @@ mark {
   font-weight: bold;
 }
 
-.caps {
-  font-feature-settings: "c2sc" 1, "smcp" 1;
-}
-
-.site-footer {
-  font-family: $mono;
-  font-size: 1rem;
-}
-
-.page-id-44 article {
-  font-family: $mono;
-  font-size: 1.125rem;
-}
-
-.entry-title {
-  text-align: center;
-}
-
-.post-edit-link {
-  text-align: center;
-  display: block;
-  &:before {
-    content: "\f464";
-    font-family: dashicons;
-    padding-right: 2px;
-    //padding: 3px;
-    //border-top-left-radius: 1rem;
-    //border-top-right-radius: 1rem;
-    //border-bottom-left-radius: 0;
-    //border-bottom-right-radius: 1rem;
-    //background: $grey;
-    //color: $white;
-    //clear: both;
-    //margin-right: 1rem;
-  }
-}
-
-// .postmetadata {
-//   font-family: $mono;
-//   font-size: 1rem;
-// }
-
-.parent-link {
-  text-align: center;
-  display: block;
-}
-
-.subpage-nav {
-  display: block;
-  overflow: hidden;
-  list-style: none;
-  font-size: 0.875rem;
-  text-align: center;
-  margin-left: 0;
-}
-
 em {
   font-weight: inherit;
 }
@@ -169,4 +125,52 @@ strong {
 
 sup {
   font-weight: inherit;
+}
+
+figcaption,
+.wp-caption-text {
+  //font-size: 0.75rem;
+  font-size: $small-font-size;
+  text-align: center;
+  font-style: italic;
+}
+
+.caps {
+  font-feature-settings: 'c2sc' 1, 'smcp' 1;
+}
+
+.site-footer {
+  font-family: $mono;
+}
+
+.page-id-44 article {
+  font-family: $mono;
+  font-size: $base-font-size;
+}
+
+.entry-title {
+  //text-align: center;
+}
+
+.post-edit-link {
+  text-align: center;
+  display: block;
+  &:before {
+    content: '\f464';
+    font-family: dashicons;
+    padding-right: 2px;
+  }
+}
+
+.parent-link {
+  //text-align: center;
+  display: block;
+}
+
+.subpage-nav {
+  display: block;
+  overflow: hidden;
+  list-style: none;
+  text-align: center;
+  margin-left: 0;
 }

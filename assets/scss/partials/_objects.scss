@@ -1,15 +1,21 @@
 textarea {
+  outline: none;
   width: 100%;
   resize: vertical;
-  border: 1px solid #323E48;
+  //border: 1px solid #323E48;
   border: 1px solid $darkgrey;
+
+  &:focus {
+    border-color: $green;
+  }
+
 }
 
 button,
-input[type=submit] {
+input[type='submit'] {
   -webkit-appearance: none;
   background: none;
-  border: none;
+  border: 0 none;
 }
 
 table {
@@ -21,39 +27,40 @@ table {
 }
 
 tr {
-  border-bottom: 1px solid $subduedgrey;
-  border-bottom: 1px solid #eee;
-}
+  //border-bottom: 1px solid $subduedgrey;
+  border-bottom: 1px solid $lightgrey;
 
-tr:last-of-type {
-  border-bottom: none;
+  &:last-of-type {
+    border-bottom: 0 none;
+  }
+
+  &:nth-of-type(2n) {
+    @media (max-width: 600px) {
+      background: $subduedgrey;
+    }
+  }
+
 }
 
 td {
   padding: 0.25rem 0.5rem;
-}
 
-@media (max-width: 600px) {
-  tr:nth-of-type(2n) {
-    background: $subduedgrey;
+  &:last-of-type {
+    border-right: 0 none;
   }
 }
 
 @media (min-width: 600px) {
   table {
-    font-size: 0.875rem;
+    font-size: #{0.777 * $base-font-size};
   }
   td {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
     border-right: 1px solid #eee;
   }
 }
 
-td:last-of-type {
-  border-right: none;
-}
-
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: none;
   outline: none;
   border: 1px solid $white;
@@ -63,7 +70,7 @@ input[type="search"] {
   }
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background: $blue;
   margin: 0;
 }
@@ -76,4 +83,35 @@ button,
   &:hover {
     background-color: $green;
   }
+}
+
+::-moz-selection {
+  background: $red;
+  color: $white;
+  text-shadow: none;
+}
+
+::selection {
+  background: $red;
+  color: $white;
+  text-shadow: none;
+}
+
+.alignright {
+  float: right;
+  max-width: 50%;
+  margin-left: 2rem;
+}
+
+.alignleft {
+  float: left;
+  max-width: 50%;
+  margin-right: 2rem;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
 }

@@ -1,0 +1,77 @@
+.site-header {
+  background-color: $white;
+  padding-top: $line-height;
+  padding-bottom: $line-height;
+  margin-bottom: $line-height;
+
+  .wrapper {
+    overflow: visible;
+    overflow: hidden;
+  }
+
+}
+
+.site-logo {
+  height: 3rem;
+  width: 3rem;
+  //margin-top: 0.5rem;
+  animation: fadein 0.5s;
+
+  &:hover {
+    .logo-path {
+      fill: $green;
+      // transform: rotate(10deg);
+    }
+  }
+}
+
+.site-description {
+  float: right;
+}
+
+.site-nav {
+  //margin-top: 1rem;
+  text-align: center;
+
+  .menu-item {
+    display: inline-block;
+
+    //&:before {
+    //  content: '|';
+    //  margin-right: 0.5rem;
+    //  opacity: 0.25;
+    //}
+
+    margin-left: $line-height;
+    font-weight: bold;
+
+    a {
+      color: $grey;
+    }
+
+    &:first-of-type {
+      &:before {
+        content: none;
+        margin-right: none;
+      }
+    }
+
+  }
+
+}
+
+.header-nav {
+  font-size: $small-font-size;
+  float: right;
+  padding-top: #{0.5 * $line-height};
+  display: inline-block;
+}
+
+.header-nav__list {
+  display: block;
+  float: left;
+  margin-bottom: 0;
+  .sub-menu {
+    display: none;
+  }
+}

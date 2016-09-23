@@ -3,7 +3,7 @@
 	 x="0px" y="0px" width="165.8px" height="165.8px" viewBox="0 0 165.8 165.8" style="enable-background:new 0 0 165.8 165.8;"
 	 xml:space="preserve" class="site-logo" alt="Logo">
 <style type="text/css">
-	.logo-path{fill:#D31245;}
+	.logo-path{ fill: #D31245; }
 </style>
 <defs>
 </defs>
